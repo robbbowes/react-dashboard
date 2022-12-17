@@ -1,6 +1,7 @@
 import './chart.scss';
 
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+// import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const Chart = () => {
 
@@ -58,6 +59,7 @@ const Chart = () => {
 
     return (
         <div className='chart'>
+            <div className="title">Last X builds</div>
             <ResponsiveContainer width="100%" aspect={2 / 1} >
                 <AreaChart
                     width={500}
@@ -70,15 +72,38 @@ const Chart = () => {
                         bottom: 0,
                     }}
                 >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
+                    <CartesianGrid strokeDasharray="3 3" className="chart-grid" />
+                    <XAxis dataKey="name" stroke='gray' />
+                    <YAxis stroke='gray'/>
                     <Tooltip />
                     <Area type="monotone" dataKey="pass" stackId="1" stroke="rgb(0, 128, 0)" fill="rgb(0, 128, 0)" />
                     <Area type="monotone" dataKey="bugs" stackId="1" stroke="rgb(255, 0, 0)" fill="rgb(255, 0, 0)" />
                     <Area type="monotone" dataKey="failed" stackId="1" stroke="rgb(119, 7, 55)" fill="rgb(119, 7, 55)" />
                     <Area type="monotone" dataKey="ignored" stackId="1" stroke="rgb(253, 218, 13)" fill="rgb(253, 218, 13)" />
                 </AreaChart>
+
+                {/* <BarChart
+                    width={500}
+                    height={300}
+                    data={data}
+                    margin={{
+                        top: 20,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                    }}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Bar dataKey="pass" stackId="a" fill="rgb(0, 128, 0)" />
+                    <Bar dataKey="bugs" stackId="a" fill="rgb(255, 0, 0)" />
+                    <Bar dataKey="failed" stackId="a" fill="rgb(119, 7, 55)" />
+                    <Bar dataKey="ignored" stackId="a" fill="rgb(253, 218, 13)" />
+                </BarChart> */}
+
             </ResponsiveContainer>
         </div>
     );
