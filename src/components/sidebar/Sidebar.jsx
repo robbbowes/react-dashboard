@@ -6,13 +6,17 @@ import LooksOneOutlinedIcon from '@mui/icons-material/LooksOneOutlined';
 import LooksTwoOutlinedIcon from '@mui/icons-material/LooksTwoOutlined';
 import Looks3OutlinedIcon from '@mui/icons-material/Looks3Outlined';
 import RouteOutlinedIcon from '@mui/icons-material/RouteOutlined';
+import DangerousOutlinedIcon from '@mui/icons-material/DangerousOutlined';
 import BugReportIcon from '@mui/icons-material/BugReport';
+import SnoozeOutlinedIcon from '@mui/icons-material/SnoozeOutlined';
+import UploadFileOutlinedIcon from '@mui/icons-material/UploadFileOutlined';
+import SourceOutlinedIcon from '@mui/icons-material/SourceOutlined';
 
 const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className="top">
-                <span className="logo">Admin</span>
+                <span className="logo">Test Tracker</span>
             </div>
             <hr />
             <div className="center">
@@ -42,10 +46,27 @@ const Sidebar = () => {
                         <RouteOutlinedIcon className="icon" />
                         <span>Smoke</span>
                     </li>
-                    <p className="title">TICKETS</p>
+                    <p className="title">ISSUES</p>
+                    <li>
+                        <DangerousOutlinedIcon className="icon" />
+                        <span>Failures</span>
+                    </li>
                     <li>
                         <BugReportIcon className="icon" />
                         <span>Bugs</span>
+                    </li>
+                    <li>
+                        <SnoozeOutlinedIcon className="icon" />
+                        <span>Ignored</span>
+                    </li>
+                    <p className="title">DATA</p>
+                    <li>
+                        <UploadFileOutlinedIcon className="icon" />
+                        <span>Upload Results</span>
+                    </li>
+                    <li>
+                        <SourceOutlinedIcon className="icon" />
+                        <span>Test Map</span>
                     </li>
                 </ul>
             </div>
