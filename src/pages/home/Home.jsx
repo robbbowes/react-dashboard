@@ -6,19 +6,24 @@ import Widget from '../../components/widget/Widget';
 import './home.scss'
 
 const Home = () => {
+
+    // temporary 
+    const featuredChart = "High";
+
     return (
         <div className='home'>
             <Sidebar />
-            <div className="homeContainer">
+            <div className="home-container">
                 <Navbar />
                 <div className="widgets">
+                    <Widget type="all" />
                     <Widget type="high" />
                     <Widget type="medium" />
                     <Widget type="low" />
                     <Widget type="smoke" />
                 </div>
                 <div className="charts">
-                    <Featured />
+                    <Featured featured={featuredChart} />
                     <Chart />
                 </div>
             </div>

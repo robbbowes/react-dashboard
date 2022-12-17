@@ -1,5 +1,6 @@
 import './widget.scss'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import FormatListNumberedRtlOutlinedIcon from '@mui/icons-material/FormatListNumberedRtlOutlined';
 import LooksOneOutlinedIcon from '@mui/icons-material/LooksOneOutlined';
 import LooksTwoOutlinedIcon from '@mui/icons-material/LooksTwoOutlined';
 import Looks3OutlinedIcon from '@mui/icons-material/Looks3Outlined';
@@ -14,6 +15,12 @@ const Widget = ({ type }) => {
     const percentage = 87;
 
     switch (type) {
+        case "all":
+            data = {
+                title: "ALL",
+                icon: <FormatListNumberedRtlOutlinedIcon className="icon" style={{ color: "blue", backgroundColor: "rgba(0, 0, 255, 0.2)" }} />
+            }
+            break;
         case "high":
             data = {
                 title: "HIGH",

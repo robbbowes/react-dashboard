@@ -5,18 +5,18 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-const Featured = () => {
+const Featured = ({ featured }) => {
     return (
         <div className='featured'>
             <div className="top">
-                <h1 className="title">Overall Results</h1>
+                <h1 className="title">{featured} Results</h1>
                 <MoreVertIcon fontSize="small" />
             </div>
             <div className="bottom">
                 <div className="featured-chart">
                     <CircularProgressbar value={70} text="70%" strokeWidth={5} />
                 </div>
-                <p className="title">Total Passing Tests</p>
+                <p className="title">Total Tests</p>
                 <p className="amount">345</p>
                 <p className="description">Something else can maybe go here</p>
                 <div className="summary">
