@@ -2,10 +2,10 @@ import './sidebar.scss'
 
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
-import LooksOneIcon from '@mui/icons-material/LooksOne';
-import LooksTwoIcon from '@mui/icons-material/LooksTwo';
-import Looks3Icon from '@mui/icons-material/Looks3';
-import RotateRightIcon from '@mui/icons-material/RotateRight';
+import LooksOneOutlinedIcon from '@mui/icons-material/LooksOneOutlined';
+import LooksTwoOutlinedIcon from '@mui/icons-material/LooksTwoOutlined';
+import Looks3OutlinedIcon from '@mui/icons-material/Looks3Outlined';
+import RouteOutlinedIcon from '@mui/icons-material/RouteOutlined';
 import BugReportIcon from '@mui/icons-material/BugReport';
 
 const Sidebar = () => {
@@ -27,19 +27,19 @@ const Sidebar = () => {
                         <span>All</span>
                     </li>
                     <li>
-                        <LooksOneIcon className="icon" />
+                        <LooksOneOutlinedIcon className="icon" />
                         <span>High</span>
                     </li>
                     <li>
-                        <LooksTwoIcon className="icon" />
+                        <LooksTwoOutlinedIcon className="icon" />
                         <span>Medium</span>
                     </li>
                     <li>
-                        <Looks3Icon className="icon" />
+                        <Looks3OutlinedIcon className="icon" />
                         <span>Low</span>
                     </li>
                     <li>
-                        <RotateRightIcon className="icon" />
+                        <RouteOutlinedIcon className="icon" />
                         <span>Smoke</span>
                     </li>
                     <p className="title">TICKETS</p>

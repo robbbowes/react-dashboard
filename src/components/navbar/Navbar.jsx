@@ -27,7 +27,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="item">
-                        <img src="https://images.pexels.com/photos/3586798/pexels-photo-3586798.jpeg" alt="User avatar image" className='avatar'/>
+                        <img src="https://images.pexels.com/photos/3586798/pexels-photo-3586798.jpeg" alt="User avatar" className='avatar'/>
                     </div>
 
 
