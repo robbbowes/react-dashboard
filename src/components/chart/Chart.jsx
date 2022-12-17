@@ -74,10 +74,10 @@ const Chart = () => {
                     <XAxis dataKey="name" />
                     <YAxis />
                     <Tooltip />
-                    <Area type="monotone" dataKey="pass" stackId="1" stroke="rgb(0, 128, 0)" fill="rgb(0, 128, 0, 0.7)" />
-                    <Area type="monotone" dataKey="bugs" stackId="1" stroke="rgb(255, 0, 0)" fill="rgb(255, 0, 0, 0.7)" />
-                    <Area type="monotone" dataKey="failed" stackId="1" stroke="rgb(119, 7, 55)" fill="rgb(119, 7, 55, 0.7)" />
-                    <Area type="monotone" dataKey="ignored" stackId="1" stroke="rgb(253, 218, 13)" fill="rgb(253, 218, 13, 0.7)" />
+                    <Area type="monotone" dataKey="pass" stackId="1" stroke="rgb(0, 128, 0)" fill="rgb(0, 128, 0)" />
+                    <Area type="monotone" dataKey="bugs" stackId="1" stroke="rgb(255, 0, 0)" fill="rgb(255, 0, 0)" />
+                    <Area type="monotone" dataKey="failed" stackId="1" stroke="rgb(119, 7, 55)" fill="rgb(119, 7, 55)" />
+                    <Area type="monotone" dataKey="ignored" stackId="1" stroke="rgb(253, 218, 13)" fill="rgb(253, 218, 13)" />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
