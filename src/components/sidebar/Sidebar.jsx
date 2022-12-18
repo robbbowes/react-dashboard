@@ -28,8 +28,9 @@ const Sidebar = () => {
                     <p className="title">RESULTS</p>
                     <li>
                         <FormatListNumberedIcon className="icon" />
-                        <span>All</span>
+                        <span>All Results</span>
                     </li>
+                    <p className="title">MAINTENANCE</p>
                     <li>
                         <LooksOneOutlinedIcon className="icon" />
                         <span>High</span>

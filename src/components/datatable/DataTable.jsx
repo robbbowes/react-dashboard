@@ -1,4 +1,4 @@
-import './table.scss';
+import './datatable.scss';
 import COLUMNS from './columns'
 import DUMMY_DATA from './dummydata'
 
@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 
-const Table = () => {
+const DataTable = () => {
     const [columnVisibilityModel, setColumnVisibilityModel] =
         React.useState({
             id: false,
@@ -18,14 +18,27 @@ const Table = () => {
             bugTicket: false,
             __check__: false
         });
-
     const [pageSize, setPageSize] = React.useState(10);
 
+    const actionColumn = [
+        {
+            field: 'action', headerName: 'Action', flex: 0.5, renderCell: () => {
+                return (
+                    <div className="cell-action">
+                        <div className="view-button">View </div>
+                        <div className="delete-button">Delete </div>
+                    </div>
+                )
+            }
+        }
+    ]
+
+
     return (
-        <Box className="table" sx={{ height: 400, width: '100%' }}>
+        <Box className="data-table" sx={{ height: '100%', width: '100%' }}>
             <DataGrid
                 rows={DUMMY_DATA}
-                columns={COLUMNS}
+                columns={COLUMNS.concat(actionColumn)}
                 columnVisibilityModel={columnVisibilityModel}
                 onColumnVisibilityModelChange={(newModel) =>
                     setColumnVisibilityModel(newModel)
@@ -45,4 +58,4 @@ const Table = () => {
     );
 };
 
-export default Table;
+export default DataTable;
