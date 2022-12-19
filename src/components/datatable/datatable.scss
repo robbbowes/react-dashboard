@@ -1,3 +1,55 @@
 .data-table {
+
+    height: calc(100vh - 51px);
+    width: 100%;
     
+    .status, .priority {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        padding: 0px 5px;
+        font-size: 15px;
+        margin-right: 3px;
+    }
+
+    .Ok {
+        color: green;
+        border: 2px solid rgba(0, 128, 0, 0.7);
+    }
+    .Unsure {
+        color: orange;
+        border: 2px solid rgba(255, 166, 0, 0.7);;
+    }
+    .Bug {
+        color: red;
+        border: 2px solid rgba(255, 0, 0, 0.7);   
+    }
+
+    .High {
+        color: crimson;
+        background-color: rgba(255, 0, 0, 0.2);
+    }
+    .Medium {
+        color: goldenrod;
+        background-color: rgba(218, 165, 32, 0.2)
+    }
+    .Low {
+        color: green;
+        background-color: rgba(0, 128, 0, 0.2);
+    }
+    .Smoke {
+        color: purple;
+        background-color: rgba(128, 0, 128, 0.2);
+    }
+
+    .view-button {
+        cursor: pointer;
+        color: darkblue;
+        border: 1px solid rgba(0, 0, 139, 0.5);
+        border-radius: 5px;
+        padding: 2px 7px;
+        font-size: 15px;
+    }
+
+
 }

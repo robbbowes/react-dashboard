@@ -1,6 +1,6 @@
 import './datatable.scss';
-import COLUMNS from './columns'
-import DUMMY_DATA from './dummydata'
+import COLUMNS from './columns/columns'
+import DUMMY_DATA from '../../dummydata/data'
 
 import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -8,34 +8,35 @@ import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 
 const DataTable = () => {
+
     const [columnVisibilityModel, setColumnVisibilityModel] =
         React.useState({
             id: false,
             testLinkIdid: false,
+            testPackage: false,
             setToIgnore: false,
             comments: false,
             partialCoverageOnly: false,
             bugTicket: false,
             __check__: false
         });
-    const [pageSize, setPageSize] = React.useState(10);
+
+    const [pageSize, setPageSize] = React.useState(50);
 
     const actionColumn = [
         {
-            field: 'action', headerName: 'Action', flex: 0.5, renderCell: () => {
+            field: 'action', headerName: 'Action', flex: 0.5, filterable: false, hideable: false, renderCell: () => {
                 return (
                     <div className="cell-action">
-                        <div className="view-button">View </div>
-                        <div className="delete-button">Delete </div>
+                        <div className="view-button">View</div>
                     </div>
                 )
             }
         }
     ]
 
-
     return (
-        <Box className="data-table" sx={{ height: '100%', width: '100%' }}>
+        <Box className="data-table">
             <DataGrid
                 rows={DUMMY_DATA}
                 columns={COLUMNS.concat(actionColumn)}
