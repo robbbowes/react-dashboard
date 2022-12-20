@@ -1,7 +1,7 @@
 const DUMMY_DATA = [
     {
         id: 1,
-        testLinkIdid: "ABCD-123412",
+        testLinkId: "ABCD-123412",
         testPackage: 'This is the name of a test package',
         testClass: 'This is the name of a test class',
         testName: 'This is the name of an individual test it\'s kinda long',

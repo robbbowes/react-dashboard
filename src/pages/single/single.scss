@@ -1,0 +1,86 @@
+.single {
+    display: flex;
+    width: 100%;
+
+    .single-container {
+        flex: 6;
+
+        .top {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+
+            .left {
+                position: relative;
+                flex: 1;
+                padding: 20px;
+                -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+                box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);  
+                
+                .priority {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 5px;
+                    border-radius: 0px 0px 0px 5px;
+                }
+
+                .High {
+                    color: crimson;
+                    background-color: rgba(255, 0, 0, 0.2);
+                }
+                .Medium {
+                    color: goldenrod;
+                    background-color: rgba(218, 165, 32, 0.2);
+                }
+                .Low {
+                    color: green;
+                    background-color: rgba(0, 128, 0, 0.2);
+                }
+                .Smoke {
+                    color: purple;
+                    background-color: rgba(128, 0, 128, 0.2);
+                }
+                
+                // .item {
+                //     display: flex;
+                //     gap: 20px;
+                // }
+
+                .details {
+
+                    .item-title {
+                        margin: 5px 0px 10px 0px ;
+                        color: #555;
+                    }
+
+                    .detail-item {
+                        margin-bottom: 10px;
+                        font-size: 14px;
+
+                        .item-key {
+                            font-weight: bold;
+                            color: gray;
+                        }
+
+                        .item-value {
+                            float: right;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+            }
+
+            .right {
+                flex: 2;
+            }
+        }
+    }
+
+    .title {
+        font-size: 16px;
+        color: lightgray;
+        margin-bottom: 20px;
+    }
+}
