@@ -24,7 +24,7 @@ const Home = () => {
                 </div>
                 <div className="charts">
                     <Featured featured={featuredChart} />
-                    <Chart />
+                    <Chart aspect={2 / 1} title={featuredChart}/>
                 </div>
                 {/* <div className="list-container">
                     <div className="list-title">Table title</div>

@@ -4,15 +4,28 @@ const DUMMY_DATA = [
         testLinkId: "ABCD-123412",
         testPackage: 'This is the name of a test package',
         testClass: 'This is the name of a test class',
-        testName: 'This is the name of an individual test it\'s kinda long',
+        // testName: 'This is the name of an individual test it\'s kinda long',
         testPriority: 'High',
         generalWorkflow: 'Authorisation',
         specificWorkflow: 'Login',
         setToIgnore: true,
-        comments: 'Test comment',
+        // comments: 'Test comment',
         partialCoverageOnly: false,
-        bugTicket: "BugNum-123456",
-        status: [{ user: 'RJB', verdict: 'Ok' }, { user: 'CL', verdict: 'Bug' }]
+        // bugTicket: "BugNum-123456",
+        // status: [{ user: 'RJB', verdict: 'Ok' }, { user: 'CL', verdict: 'Bug' }],
+        testMethods: [
+            {
+                name: 'This is the name of an individual test it\'s kinda long',
+                comments: 'Test comment',
+                status: [{ user: 'RJB', verdict: 'Ok' }, { user: 'CL', verdict: 'Bug' }]
+            },
+            {
+                name: 'This is the name of an individual test it\'s kinda long',
+                comments: 'Test comment',
+                bugTicket: "BugNum-123456",
+                status: [{ user: 'RJB', verdict: 'Bug' }, { user: 'OV', verdict: 'Bug' }]
+            }
+        ] 
     },
     {
         id: 2,

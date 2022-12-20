@@ -66,7 +66,7 @@ const Single = () => {
                         </div>
                     </div>
                     <div className="right">
-                        <Chart />
+                        <Chart aspect={3 / 1} title="Individual chart, doesn't make too much sense" />
                     </div>
                 </div>
                 <div className="bottom"></div>
