@@ -41,7 +41,8 @@ const Upload = () => {
             });
         }
 
-        console.log(JSON.stringify(automatedTestClasses))
+        // console.log(JSON.stringify(automatedTestClasses))
+        console.log(automatedTestClasses)
 
     }
 
@@ -53,7 +54,9 @@ const Upload = () => {
                 <div className="top">
                     <div className="left">
                         <h1>Results Upload</h1>
-                        <div className="upload-drop"
+                        <div className={`upload-drop ${results.length > 0 ? 'disabled' : ''}`}
+
+
                             onDragOver={(e) => {
                                 e.preventDefault()
                             }}
@@ -62,7 +65,7 @@ const Upload = () => {
 
                                 // console.log(e.dataTransfer?.files)
 
-                                if (e.dataTransfer?.files) {
+                                if (e.dataTransfer?.files && results.length < 1) {
                                     Array.from(e.dataTransfer.files)
                                         .filter((file) => file.type === 'text/csv')
                                         .forEach(async (file) => {
