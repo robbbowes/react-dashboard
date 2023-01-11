@@ -38,6 +38,7 @@ const DataTable = () => {
     return (
         <Box className="data-table">
             <DataGrid
+                className="datagrid"
                 rows={DUMMY_DATA}
                 columns={COLUMNS.concat(actionColumn)}
                 columnVisibilityModel={columnVisibilityModel}

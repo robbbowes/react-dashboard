@@ -42,12 +42,19 @@
 
                 .icon {
                     font-size: 20px;
+                    cursor: pointer;
+                }
+
+                .language {
+                    margin-left: 5px;
+                    cursor: pointer;
                 }
 
                 .avatar {
                     width: 30px;
                     height: 30px;
                     border-radius: 50%;
+                    cursor: pointer;
                 }
 
                 .counter {
@@ -64,6 +71,7 @@
                     position: absolute;
                     top: -5px;
                     right: -5px;
+                    cursor: pointer;
                 }
             }
         }

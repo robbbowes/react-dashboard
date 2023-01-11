@@ -4,23 +4,28 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import Upload from "./pages/upload/Upload";
+import "./style/dark.scss"
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
 
 function App() {
+
+  const { darkMode} = useContext(DarkModeContext)
+
   return (
-    <div className="App">
+    <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter>
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
+
             <Route path="login" element={<Login />} />
-            <Route path="users">
+
+            <Route path="all">
               <Route index element={<List />}/>
-              <Route path=":userId" element={<Single />}/>
+              <Route path=":id" element={<Single />}/>
             </Route>
-            <Route path="products">
-              <Route index element={<List />}/>
-              <Route path=":productId" element={<Single />}/>
-            </Route>
+            
             <Route path="upload" element={<Upload />}/>
           </Route>
         </Routes>

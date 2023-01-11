@@ -1,16 +1,17 @@
 import './upload.scss'
-import React from "react";
-import { parse } from "papaparse";
-import Sidebar from "../../components/sidebar/Sidebar";
-import Navbar from "../../components/navbar/Navbar";
-import UploadFileIcon from '@mui/icons-material/UploadFile';
+import React from 'react'
+import { parse } from 'papaparse'
+import Sidebar from '../../components/sidebar/Sidebar'
+import Navbar from '../../components/navbar/Navbar'
+import UploadFileIcon from '@mui/icons-material/UploadFile'
+import { Autotest } from '../../interfaces/Autotest'
+import { AutomatedTestClasses } from '../../interfaces/AutotestClasses'
 
 const Upload = () => {
+    const [results, setResults] = React.useState<Autotest[]>([])
 
-    const [results, setResults] = React.useState([])
-
-    const doStuff = (data) => {
-        const automatedTestClasses = {}; // object to store unique automatedTestClasses
+    const doStuff = (data: Autotest[]) => {
+        const automatedTestClasses: AutomatedTestClasses = {} // object to store unique automatedTestClasses
 
         for (const item of data) {
             // check if the automatedTestClass has already been added to the object
@@ -24,8 +25,8 @@ const Upload = () => {
                     generalWorkflow: item.generalWorkflow,
                     specificWorkflow: item.specificWorkflow,
                     partialCoverageOnly: item.partialCoverageOnly,
-                    tests: []
-                };
+                    tests: [],
+                }
             }
         }
 
@@ -37,13 +38,12 @@ const Upload = () => {
                 comments: item.comments,
                 setToIgnore: item.setToIgnore,
                 testDuration: item.testDuration,
-                testResult: item.testResult
-            });
+                testResult: item.testResult,
+            })
         }
 
         // console.log(JSON.stringify(automatedTestClasses))
         console.log(automatedTestClasses)
-
     }
 
     return (
@@ -54,27 +54,30 @@ const Upload = () => {
                 <div className="top">
                     <div className="left">
                         <h1>Results Upload</h1>
-                        <div className={`upload-drop ${results.length > 0 ? 'disabled' : ''}`}
-
-
+                        <div
+                            className={`upload-drop ${
+                                results.length > 0 ? 'disabled' : ''
+                            }`}
                             onDragOver={(e) => {
                                 e.preventDefault()
                             }}
                             onDrop={(e) => {
                                 e.preventDefault()
 
-                                // console.log(e.dataTransfer?.files)
-
-                                if (e.dataTransfer?.files && results.length < 1) {
+                                if (
+                                    e.dataTransfer?.files &&
+                                    results.length < 1
+                                ) {
                                     Array.from(e.dataTransfer.files)
-                                        .filter((file) => file.type === 'text/csv')
+                                        .filter(
+                                            (file) => file.type === 'text/csv'
+                                        )
                                         .forEach(async (file) => {
                                             const text = await file.text()
-                                            const result = parse(text, {
+                                            const result: any = parse(text, {
                                                 header: true,
                                                 delimiter: '\t',
                                             })
-                                            // console.log("Result:", result)
                                             doStuff(result.data)
                                             setResults((existing) => [
                                                 ...existing,
@@ -83,22 +86,17 @@ const Upload = () => {
                                         })
                                 }
                             }}
-                            primary
                         >
                             <UploadFileIcon className="icon" />
                             <p>Drop CSV Results Here</p>
                         </div>
                     </div>
-                    <div className="right">
-                        RIGHT
-                    </div>
+                    <div className="right">RIGHT</div>
                 </div>
-                <div className="bottom">
-                    BOTTOM
-                </div>
+                <div className="bottom">BOTTOM</div>
             </div>
         </div>
-    );
+    )
 }
 
-export default Upload;
+export default Upload
