@@ -1,7 +1,7 @@
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import List from "./pages/list/List";
+import DataTableList from "./pages/list/DataTableList";
 import Single from "./pages/single/Single";
 import Upload from "./pages/upload/Upload";
 import "./style/dark.scss"
@@ -21,8 +21,12 @@ function App() {
 
             <Route path="login" element={<Login />} />
 
-            <Route path="all">
-              <Route index element={<List />}/>
+            <Route path="tests">
+              <Route path="all" element={<DataTableList />}/>
+              <Route path="high" element={<DataTableList />}/>
+              <Route path="medium" element={<DataTableList />}/>
+              <Route path="low" element={<DataTableList />}/>
+              <Route path="smoke" element={<DataTableList />}/>
               <Route path=":id" element={<Single />}/>
             </Route>
             

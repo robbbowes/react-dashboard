@@ -39,7 +39,7 @@ const Sidebar = () => {
                     </Link>
 
                     <p className="title">RESULTS</p>
-                    <Link to="/all" style={{ textDecoration: 'none' }}>
+                    <Link to="/tests/all" style={{ textDecoration: 'none' }}>
                         <li>
                             <FormatListNumberedIcon className="icon" />
                             <span>All Results</span>
@@ -47,25 +47,25 @@ const Sidebar = () => {
                     </Link>
 
                     <p className="title">MAINTENANCE</p>
-                    <Link to="/high" style={{ textDecoration: 'none' }}>
+                    <Link to="/tests/high" style={{ textDecoration: 'none' }}>
                         <li>
                             <LooksOneOutlinedIcon className="icon" />
                             <span>High</span>
                         </li>
                     </Link>
-                    <Link to="/medium" style={{ textDecoration: 'none' }}>
+                    <Link to="/tests/medium" style={{ textDecoration: 'none' }}>
                         <li>
                             <LooksTwoOutlinedIcon className="icon" />
                             <span>Medium</span>
                         </li>
                     </Link>
-                    <Link to="/low" style={{ textDecoration: 'none' }}>
+                    <Link to="/tests/low" style={{ textDecoration: 'none' }}>
                         <li>
                             <Looks3OutlinedIcon className="icon" />
                             <span>Low</span>
                         </li>
                     </Link>
-                    <Link to="/smoke" style={{ textDecoration: 'none' }}>
+                    <Link to="/tests/smoke" style={{ textDecoration: 'none' }}>
                         <li>
                             <RouteOutlinedIcon className="icon" />
                             <span>Smoke</span>
@@ -73,19 +73,19 @@ const Sidebar = () => {
                     </Link>
 
                     <p className="title">ISSUES</p>
-                    <Link to="/failures" style={{ textDecoration: 'none' }}>
+                    <Link to="/tests/failures" style={{ textDecoration: 'none' }}>
                         <li>
                             <DangerousOutlinedIcon className="icon" />
                             <span>Failures</span>
                         </li>
                     </Link>
-                    <Link to="/bugs" style={{ textDecoration: 'none' }}>
+                    <Link to="/tests/bugs" style={{ textDecoration: 'none' }}>
                         <li>
                             <BugReportIcon className="icon" />
                             <span>Bugs</span>
                         </li>
                     </Link>
-                    <Link to="/ignored" style={{ textDecoration: 'none' }}>
+                    <Link to="/tests/ignored" style={{ textDecoration: 'none' }}>
                         <li>
                             <SnoozeOutlinedIcon className="icon" />
                             <span>Ignored</span>

@@ -1,11 +1,7 @@
 import { createContext, useReducer } from "react"
 import React from 'react'
 import DarkModeReducer from "./darkModeReducer"
-
-interface DarkModeContextValue {
-    darkMode: boolean;
-    dispatch: React.Dispatch<{ type: any; }>
-}
+import { DarkModeContextValue } from "../interfaces/DarkModeContextValue"
 
 const INITIAL_STATE: DarkModeContextValue = {
     darkMode: false,
