@@ -1,3 +1,5 @@
+@use "../../style/global" as g;
+
 .upload {
     display: flex;
     widows: 100%;
@@ -13,8 +15,8 @@
             .left {
                 flex: 1;
                 padding: 20px;
-                -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-                box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);  
+                -webkit-box-shadow: 2px 4px 10px 1px g.$webkit-box-shadow;
+                box-shadow: 2px 4px 10px 1px g.$box-shadow;  
 
                 .disabled {
                     cursor: not-allowed;
@@ -36,8 +38,8 @@
             .right {
                 flex: 2;
                 padding: 20px;
-                -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-                box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);  
+                -webkit-box-shadow: 2px 4px 10px 1px g.$webkit-box-shadow;
+                box-shadow: 2px 4px 10px 1px g.$box-shadow;  
             }
 
         }

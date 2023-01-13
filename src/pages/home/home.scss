@@ -1,3 +1,5 @@
+@use "../../style/global" as g;
+
 .home{
     display: flex;
 
@@ -15,14 +17,14 @@
         }
 
         .list-container {
-            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-            box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+            -webkit-box-shadow: 2px 4px 10px 1px g.$webkit-box-shadow;
+            box-shadow: 2px 4px 10px 1px g.$box-shadow;
             padding: 20px;
             margin: 20px;
 
             .list-title {
                 font-weight: 500;
-                color: gray;
+                color: g.$gray;
                 margin-bottom: 15px;
             }
         }

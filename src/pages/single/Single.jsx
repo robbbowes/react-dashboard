@@ -16,7 +16,9 @@ const Single = () => {
                 <div className="top">
                     <div className="left">
                         <div className={`${item.testPriority} priority`}>{item.testPriority}</div>
-                        <h1 className="title">Test Details</h1>
+                        <div className="title">
+                            <h1 className="title-text">Test Details</h1>
+                        </div>
                         <div className="details">
                             <h4 className="item-title">{item.testName}</h4>
                             <div className="detail-item">

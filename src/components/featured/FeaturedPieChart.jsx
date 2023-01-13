@@ -3,10 +3,10 @@ import { PieChart, Pie, Cell } from 'recharts';
 
 // temporary
 const data = [
-    { name: 'Bugs', value: 50, color: 'rgb(255, 0, 0, 0.8)' },
-    { name: 'Fail', value: 30, color: 'rgb(119, 7, 55, 0.8)' },
-    { name: 'Ignored', value: 10, color: 'rgb(253, 218, 13, 0.8)' },
-    { name: 'Pass', value: 600, color: 'rgb(0, 128, 0, 0.8)' },
+    { name: 'bug', value: 50, color: '#080705' },
+    { name: 'fail', value: 30, color: '#800000' },
+    { name: 'ignored', value: 10, color: '#004980' },
+    { name: 'pass', value: 600, color: '#008000' },
 ];
 // const COLORS = ['#FF8042', '#0088FE', '#00C49F', '#FFBB28'];
 

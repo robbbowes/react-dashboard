@@ -22,11 +22,14 @@ function App() {
             <Route path="login" element={<Login />} />
 
             <Route path="tests">
-              <Route path="all" element={<DataTableList />}/>
-              <Route path="high" element={<DataTableList />}/>
-              <Route path="medium" element={<DataTableList />}/>
-              <Route path="low" element={<DataTableList />}/>
-              <Route path="smoke" element={<DataTableList />}/>
+              <Route path="all" element={<DataTableList priority="all" />}/>
+              <Route path="high" element={<DataTableList priority="high" />}/>
+              <Route path="medium" element={<DataTableList priority="medium" />}/>
+              <Route path="low" element={<DataTableList priority="low" />}/>
+              <Route path="smoke" element={<DataTableList priority="smoke" />}/>
+              <Route path="failures" element={<DataTableList priority="smoke" />}/>
+              <Route path="bugs" element={<DataTableList priority="smoke" />}/>
+              <Route path="ignored" element={<DataTableList priority="smoke" />}/>
               <Route path=":id" element={<Single />}/>
             </Route>
             

@@ -1,3 +1,5 @@
+@use 'global' as g;
+
 .app.dark {
     background-color: #111;
     color: rgb(156, 156, 156);
@@ -49,10 +51,14 @@
             border: none;
 
             .view-button {
-                color: gray;
-                border: none;
+                color: g.$light-blue;
+                border: 1px solid g.$light-blue-subdued;
             }
         }
+    }
+
+    .recharts-pie-sector path {
+        stroke: darkgray;
     }
 
 }

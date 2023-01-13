@@ -1,10 +1,12 @@
+@use "../../style/global" as g;
+
 .widget {
     display: flex;
     justify-content: space-between;
     flex: 1;
     padding: 10px;
-    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    -webkit-box-shadow: 2px 4px 10px 1px g.$webkit-box-shadow;
+    box-shadow: 2px 4px 10px 1px g.$box-shadow;
     border-radius: 10px;
     height: 140px;
 
@@ -17,7 +19,7 @@
         .title {
             font-weight: bold;
             font-size: 14px;
-            color: rgb(160, 160, 160);
+            color: g.$gray3;
         }
 
         .counter {
@@ -26,10 +28,10 @@
         }
 
         .link {
-            border-bottom: 1px solid gray;
+            border-bottom: 1px solid ;
             font-size: 13px;
             font-weight: 600;
-            color: #888;
+            color: g.$gray2;
         }
 
         .percentage {
@@ -38,10 +40,10 @@
             font-size: 14px;
 
             &.positive {
-                color: green;
+                color: g.$percent-positive;
             }
             &.negative {
-                color: red;
+                color: g.$percent-negative;
             }
         }
 

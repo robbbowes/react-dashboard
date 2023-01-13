@@ -1,3 +1,5 @@
+@use '../../style/global' as g;
+
 .single {
     display: flex;
     width: 100%;
@@ -14,8 +16,8 @@
                 position: relative;
                 flex: 1;
                 padding: 20px;
-                -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-                box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);  
+                -webkit-box-shadow: 2px 4px 10px 1px g.$webkit-box-shadow;
+                box-shadow: 2px 4px 10px 1px g.$box-shadow;
                 
                 .priority {
                     position: absolute;
@@ -26,33 +28,23 @@
                 }
 
                 .High {
-                    color: crimson;
-                    background-color: rgba(255, 0, 0, 0.2);
+                    color: g.$high-prio;
+                    background-color: g.$high-prio-background;
                 }
                 .Medium {
-                    color: goldenrod;
-                    background-color: rgba(218, 165, 32, 0.2);
+                    color: g.$medium-prio;
+                    background-color: g.$medium-prio-background;
                 }
                 .Low {
-                    color: green;
-                    background-color: rgba(0, 128, 0, 0.2);
+                    color: g.$medium-prio;
+                    background-color: g.$medium-prio-background
                 }
                 .Smoke {
-                    color: purple;
-                    background-color: rgba(128, 0, 128, 0.2);
+                    color: g.$smoke-prio;
+                    background-color: g.$smoke-prio-background;
                 }
                 
-                // .item {
-                //     display: flex;
-                //     gap: 20px;
-                // }
-
                 .details {
-
-                    .item-title {
-                        margin: 5px 0px 10px 0px ;
-                        color: #555;
-                    }
 
                     .detail-item {
                         margin-bottom: 10px;
@@ -60,7 +52,7 @@
 
                         .item-key {
                             font-weight: bold;
-                            color: gray;
+                            color: g.$gray;
                         }
 
                         .item-value {
@@ -80,7 +72,7 @@
 
     .title {
         font-size: 16px;
-        color: lightgray;
+        color: g.$gray4;
         margin-bottom: 20px;
     }
 }

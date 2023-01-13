@@ -77,8 +77,8 @@ const Chart = ({aspect, title}) => {
                     <YAxis stroke='gray'/>
                     <Tooltip />
                     <Area type="monotone" dataKey="pass" stackId="1" stroke="rgb(0, 128, 0)" fill="rgb(0, 128, 0)" />
-                    <Area type="monotone" dataKey="bugs" stackId="1" stroke="rgb(255, 0, 0)" fill="rgb(255, 0, 0)" />
-                    <Area type="monotone" dataKey="failed" stackId="1" stroke="rgb(119, 7, 55)" fill="rgb(119, 7, 55)" />
+                    <Area type="monotone" dataKey="bugs" stackId="1" stroke="#080705" fill="#080705" />
+                    <Area type="monotone" dataKey="failed" stackId="1" stroke="rgb(255, 0, 0)" fill="rgb(255, 0, 0)" />
                     <Area type="monotone" dataKey="ignored" stackId="1" stroke="rgb(253, 218, 13)" fill="rgb(253, 218, 13)" />
                 </AreaChart>
 
